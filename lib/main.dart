@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import "components.dart";
 import 'theme.dart';
+import 'students_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -123,6 +124,28 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (_) => const ComponentsPage()),
+                  );
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.pages),
+                title: const Text('Componentes'),
+                onTap: () {
+                  Navigator.pop(context); // fecha o drawer
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ComponentsPage()),
+                  );
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.person),
+                title: const Text('Alunos'),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const StudentsPage()),
                   );
                 },
               ),
